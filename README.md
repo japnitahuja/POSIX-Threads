@@ -14,6 +14,7 @@ This repository contains the following files:
 `pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function. <br />
 `pthread_join.c` This file demonstrates how to wait for a thread to complete its execution using the pthread_join() function. <br />
 `pthread_shared_vars.c` This file demonstrates how threads share memory. <br />
+`pthread_race_condition.c` This file demonstrates how the share memory may result in race conditions. <br />
 `pthread_mutex.c` This file demonstrates how to use a mutex to protect a critical section of code from concurrent access by multiple threads. <br />
 `pthread_cond_wait.c` This file demonstrates how to use a conditional variable to synchronize threads. <br />
 
