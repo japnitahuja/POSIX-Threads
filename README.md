@@ -18,6 +18,7 @@ This repository contains the following files (Go through in order):
 `pthread_race_condition.c` This file demonstrates how the share memory may result in race conditions. <br />
 `pthread_mutex.c` This file demonstrates how to use a mutex to protect a critical section of code from concurrent access by multiple threads. <br />
 `pthread_return_value.c` This file demonstrates how to return values from the thread functions. <br />
+`pthread_thread_arg.c` This file demonstrates how to send arguments in thread functions. <br />
 `pthread_cond_wait.c` This file demonstrates how to use a conditional variable to synchronize threads. <br />
 
 ## Prerequisites
