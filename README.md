@@ -10,8 +10,12 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
 
 This repository contains the following files:
 
-[Overview](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md) <br/>
-`pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function. <br />
+<ol>
+<li>[Overview](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)</li>
+<li>[Thread Creation](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)</li>
+<ul>
+<li>`pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function. </li>
+</ul>
 `pthread_join.c` This file demonstrates how to wait for a thread to complete its execution using the pthread_join() function. <br />
 `pthread_multiple_threads.c` This file demonstrates how to create and join multiple threads using a for loop. <br />
 `pthread_shared_vars.c` This file demonstrates how threads share memory. <br />
@@ -22,6 +26,7 @@ This repository contains the following files:
 `pthread_sum_array.c` This file demonstrates how to sum an array parallely using two threads. <br />
 `pthread_sum_array_mutex.c` This file demonstrates how to sum an array parallely using mutex. <br />
 `pthread_cond_wait.c` This file demonstrates how to use a conditional variable to synchronize threads. <br />
+</ol>
 
 ## Prerequisites
 
