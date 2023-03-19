@@ -10,23 +10,19 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
 
 This repository contains the following files:
 
-<ol>
-<li> [Overview](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)</li>
-<li> [Thread Creation](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)</li>
-<ul>
-<li>`pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function. </li>
-</ul>
-`pthread_join.c` This file demonstrates how to wait for a thread to complete its execution using the pthread_join() function. <br />
-`pthread_multiple_threads.c` This file demonstrates how to create and join multiple threads using a for loop. <br />
-`pthread_shared_vars.c` This file demonstrates how threads share memory. <br />
-`pthread_race_condition.c` This file demonstrates how the share memory may result in race conditions. <br />
-`pthread_mutex.c` This file demonstrates how to use a mutex to protect a critical section of code from concurrent access by multiple threads. <br />
-`pthread_return_value.c` This file demonstrates how to return values from the thread functions. <br />
-`pthread_thread_arg.c` This file demonstrates how to send arguments in thread functions. <br />
-`pthread_sum_array.c` This file demonstrates how to sum an array parallely using two threads. <br />
-`pthread_sum_array_mutex.c` This file demonstrates how to sum an array parallely using mutex. <br />
-`pthread_cond_wait.c` This file demonstrates how to use a conditional variable to synchronize threads. <br />
-</ol>
+1. [Overview](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)
+2. [Thread Creation](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)
+   ..\* `pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function.
+   ..\* `pthread_join.c` This file demonstrates how to wait for a thread to complete its execution using the pthread_join() function. <br />
+   `pthread_multiple_threads.c` This file demonstrates how to create and join multiple threads using a for loop. <br />
+   `pthread_shared_vars.c` This file demonstrates how threads share memory. <br />
+   `pthread_race_condition.c` This file demonstrates how the share memory may result in race conditions. <br />
+   `pthread_mutex.c` This file demonstrates how to use a mutex to protect a critical section of code from concurrent access by multiple threads. <br />
+   `pthread_return_value.c` This file demonstrates how to return values from the thread functions. <br />
+   `pthread_thread_arg.c` This file demonstrates how to send arguments in thread functions. <br />
+   `pthread_sum_array.c` This file demonstrates how to sum an array parallely using two threads. <br />
+   `pthread_sum_array_mutex.c` This file demonstrates how to sum an array parallely using mutex. <br />
+   `pthread_cond_wait.c` This file demonstrates how to use a conditional variable to synchronize threads. <br />
 
 ## Prerequisites
 
