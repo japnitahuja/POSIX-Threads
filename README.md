@@ -8,7 +8,7 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
 
 ## Contents
 
-This repository contains the following files:
+This repository contains the following files (Go through in order):
 
 `README.md` This file provides an introduction and overview of the repository.<br />
 `pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function. <br />
@@ -25,7 +25,7 @@ This repository contains the following files:
 To compile and run the code in this repository, you will need:
 
 A C compiler (such as gcc)
-A POSIX Threads library (such as pthreads) or OpenMP
+A POSIX Threads library (such as pthreads)
 
 ## Usage
 

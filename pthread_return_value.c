@@ -30,8 +30,13 @@ int main(int argc, char *argv[])
     // thread creation
     pthread_create(&t1, NULL, &return_value, NULL);
     // wait for the child thread to join main thread
+    // and store the returned value in result
     pthread_join(t1, (void **)&result);
 
     printf("Returned Value: %d", *result);
+
+    // destroy the result variable
+    free(result);
+
     return 0;
 }
