@@ -11,8 +11,8 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
 This repository contains the following files:
 
 <ol>
-<li>[Overview](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)</li>
-<li>[Thread Creation](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)</li>
+<li> [Overview](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)</li>
+<li> [Thread Creation](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)</li>
 <ul>
 <li>`pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function. </li>
 </ul>
