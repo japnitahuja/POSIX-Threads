@@ -17,22 +17,24 @@ Date: 19th March 2023
 #define NUM_THREADS 2
 
 int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int total_sum = 0;     // creating global sum variable
+pthread_mutex_t mutex; // creating mutex lock
 
-void *print_value(void *arg) // pass in void pointer argument
+void *add_array_sum(void *arg)
 {
     // first cast arg to int
     // then take out the value of arg
     int start = *(int *)arg;
-    int sum = 0;
 
     for (int i = start; i < start + 5; i++)
     {
-        sum += array[i];
+        // updating total sum one thread at a time
+        pthread_mutex_lock(&mutex);
+        total_sum += array[i];
+        pthread_mutex_unlock(&mutex);
     }
 
-    // we use the same arg as a return argument
-    *(int *)arg = sum;
-    return arg;
+    free(arg);
 }
 
 int main(int argc, char *argv[])
@@ -40,29 +42,28 @@ int main(int argc, char *argv[])
     // variable to store the thread
     pthread_t threads[NUM_THREADS];
 
+    // initialisation of mutex
+    pthread_mutex_init(&mutex, NULL);
+
     // thread creation
     for (int i = 0; i < NUM_THREADS; i++)
     {
         int *x = malloc(sizeof(int));
         *x = i * 5; // start index
         // fourth argument is the void pointer argument
-        pthread_create(&threads[i], NULL, &print_value, x);
+        pthread_create(&threads[i], NULL, &add_array_sum, x);
     }
 
     // thread joining
-    int total_sum = 0;
     for (int i = 0; i < NUM_THREADS; i++)
     {
-        int *half_sum; // to store returned value
-        pthread_join(threads[i], (void **)&half_sum);
-        printf("Thread ID %d has finished with %d\n", i, *half_sum);
-        // summing up the total
-        total_sum += *half_sum;
-        // free the dynamically allocated memory
-        // during thread creation
-        free(half_sum);
+        pthread_join(threads[i], NULL);
     }
 
+    // destroying mutex
+    pthread_mutex_destroy(&mutex);
+
     printf("Total sum of array is %d", total_sum);
+
     return 0;
 }

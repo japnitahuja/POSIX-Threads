@@ -20,6 +20,7 @@ This repository contains the following files (Go through in order):
 `pthread_return_value.c` This file demonstrates how to return values from the thread functions. <br />
 `pthread_thread_arg.c` This file demonstrates how to send arguments in thread functions. <br />
 `pthread_sum_array.c` This file demonstrates how to sum an array parallely using two threads. <br />
+`pthread_sum_array_mutex.c` This file demonstrates how to sum an array parallely using mutex. <br />
 `pthread_cond_wait.c` This file demonstrates how to use a conditional variable to synchronize threads. <br />
 
 ## Prerequisites
