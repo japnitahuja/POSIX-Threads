@@ -5,3 +5,5 @@ Pthreads (POSIX threads) is a standard API (Application Programming Interface) f
 ## Why use Pthreads?
 
 Pthreads library provides a way to create multithreaded applications that can take advantage of multi-core processors and execute multiple tasks concurrently, which can lead to significant performance gains. With pthreads, you can write code that performs I/O operations, computation, and other tasks in parallel, making your program more responsive and efficient.
+
+[Back to Home](https://github.com/japnitahuja/POSIX-Threads)
