@@ -6,10 +6,6 @@ This GitHub repository contains examples and explanations of basic POSIX Threads
 
 POSIX Threads (also known as Pthreads) is a POSIX standard for threads programming. It defines a set of C programming language constructs that can be used to create and manipulate threads. Threads are lightweight processes that can run concurrently within a single process. By using threads, we can divide a complex task into smaller parts, which can be executed in parallel, thereby improving the overall performance of the application.
 
-## How to use this repo?
-
-Go through the guide one by one and look at the relevant source code.
-
 ## Table of Contents
 
 1. [Overview](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/overview.md)
@@ -41,6 +37,8 @@ A C compiler (such as gcc)
 A POSIX Threads library (such as pthreads)
 
 ## Usage
+
+Go through each topic and run the code using:
 
 On Windows:
 
