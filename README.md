@@ -13,7 +13,7 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
    - `pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function.
    - `pthread_join.c` This file demonstrates how to wait for a thread to complete its execution using the pthread_join() function.
    - `pthread_multiple_threads.c` This file demonstrates how to create and join multiple threads using a for loop.
-3. [Memory in Pthreads]()
+3. [Memory in Pthreads](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/sharedmemory.md)
    - `pthread_shared_vars.c` This file demonstrates how threads share memory.
    - `pthread_race_condition.c` This file demonstrates how the share memory may result in race conditions.
    - `pthread_mutex.c` This file demonstrates how to use a mutex to protect a critical section of code from concurrent access by multiple threads.
