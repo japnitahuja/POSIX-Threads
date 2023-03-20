@@ -4,7 +4,6 @@ In pthreads, shared global variables are accessible by all threads within a proc
 
 #### Source Code: 
 `pthread_shared_vars.c` This file demonstrates how global variables are shared between threads.
-`pthread_race_condition.c` This file demonstrates how the share memory may result in race conditions.
 
 ## Race conditions
 A race condition is a software defect that occurs when two or more threads or processes access a shared resource, such as a variable or a file, 
