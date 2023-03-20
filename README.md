@@ -17,7 +17,7 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
    - `pthread_shared_vars.c` This file demonstrates how threads share memory.
    - `pthread_race_condition.c` This file demonstrates how the share memory may result in race conditions.
    - `pthread_mutex.c` This file demonstrates how to use a mutex to protect a critical section of code from concurrent access by multiple threads.
-4. [Arguments and Return Values in thread functions]()
+4. [Arguments and Return Values in thread functions](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/argumentandreturn.md)
    - `pthread_return_value.c` This file demonstrates how to return values from the thread functions. <br />
    - `pthread_thread_arg.c` This file demonstrates how to send arguments in thread functions. <br />
 5. [Finding array sum parallely]()
