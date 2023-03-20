@@ -25,7 +25,7 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
    - `pthread_sum_array_mutex.c` This file demonstrates how to sum an array parallely using mutex. <br />
 6. [Try Lock](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/trylock.md)
    - `pthread_trylock.c` This file demonstrates how mutex lock is different from try lock. <br />
-7. [Condition Variables]()
+7. [Condition Variables](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/conditionvar.md)
    - `pthread_cond_var.c` This file demonstrates how condition variables can be used. <br />
    - `pthread_cond_broadcast.c` This file demonstrates how brodcast signal can be used. <br />
 
