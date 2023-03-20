@@ -23,6 +23,8 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
 5. [Finding array sum parallely]()
    - `pthread_sum_array.c` This file demonstrates how to sum an array parallely using two threads. <br />
    - `pthread_sum_array_mutex.c` This file demonstrates how to sum an array parallely using mutex. <br />
+6. [Try Lock]()
+   - `pthread_trylock.c` This file demonstrates how mutex lock is different from try lock. <br />
 
 ## Prerequisites
 
