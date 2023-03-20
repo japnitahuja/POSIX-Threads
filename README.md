@@ -1,4 +1,4 @@
-# Basic POSIX Threads Programming
+# Basic POSIX Threads (pthread) Programming
 
 This GitHub repository contains examples and explanations of basic POSIX Threads programming using C programming language.
 
