@@ -1,7 +1,14 @@
 /*
-This program illustrates how due to the shared memory in threads they
-might get into race conditions. The thread sum should be 2000000 but
-due to race conditions the value of sum would be less than 2000000
+The program creates two threads that both run the function
+increase_sum(). This function increments the global variable
+sum by 1,000,000 times in a loop. Since both threads are accessing
+the same global variable sum, they can get into a race condition
+where one thread overwrites the update made by the other thread.
+This leads to incorrect results.
+
+The expected output is 2000000, which is the sum of the increments
+made by both threads. However, due to race conditions,
+the actual sum can be less than 2000000.
 
 Exepected Output:
 The total should be 2000000
