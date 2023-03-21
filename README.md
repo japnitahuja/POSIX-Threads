@@ -4,7 +4,7 @@ This GitHub repository contains examples and explanations of basic POSIX Threads
 
 ## Introduction
 
-POSIX Threads (also known as Pthreads) is a POSIX standard for threads programming. It defines a set of C programming language constructs that can be used to create and manipulate threads. Threads are lightweight processes that can run concurrently within a single process. By using threads, we can divide a complex task into smaller parts, which can be executed in parallel, thereby improving the overall performance of the application.
+POSIX Threads (also known as Pthreads) is a POSIX standard for threads programming. It defines a set of C programming language constructs that can be used to create and manipulate threads. Threads are lightweight procedures that can run concurrently within a single process. By using threads, we can divide a complex task into smaller parts, which can be executed in parallel, thereby improving the overall performance of the application.
 
 ## Table of Contents
 
