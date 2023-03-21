@@ -1,7 +1,7 @@
 /*
-This program simulates a very simple stock market where we have
-a stock amount and the stock brokers (i.e. the threads) try to
-buy the stock till its available.
+This program will build on stocksimulator1 to add a stock exchange
+thread. Stock brokers will only buy the stock if it is below a certain
+price. We will be using condition variables to let the brokers know.
 
 
 Author: japnitahuja
@@ -15,14 +15,39 @@ Date: 20th March 2023
 #include <time.h>
 
 // declaring stock data
-int stock_available = 100;
+struct stock_data
+{
+    float price;
+    int count;
+};
+
+struct stock_data stock = {200.00, 100};
 pthread_mutex_t stock_mutex;
+pthread_cond_t price_cond;
 
 // struct to store broker data
 struct thread_data
 {
     int broker_id;
 };
+
+// defines the stock exchange behavior
+void *stock_exchange(void *arg)
+{
+
+    for (int i = 0; i < 10; i++)
+    {
+        pthread_mutex_lock(&stock_mutex);
+        int variation = rand() % 20 + 1;
+        stock.price -= variation;
+        pthread_cond_broadcast(&price_cond);
+        printf("New stock price: %f\n", stock.price);
+        pthread_mutex_unlock(&stock_mutex);
+        sleep(1);
+    }
+
+    pthread_exit(NULL);
+}
 
 // defines behavior of stock broker
 void *stock_broker(void *arg)
@@ -32,18 +57,25 @@ void *stock_broker(void *arg)
     broker_data = (struct thread_data *)arg;
     int total_stocks_bought = 0;
 
-    while (stock_available > 0)
+    while (stock.count > 0)
     {
         // random buying number bet 1 to 20
-        int num_stocks = rand() % 50 + 1;
+        int num_stocks = rand() % 10 + 1;
         pthread_mutex_lock(&stock_mutex);
-        // checking if enough stocks are available
-        if (stock_available >= num_stocks)
+
+        while (stock.price > 150)
         {
-            stock_available -= num_stocks;
+            printf("Broker %d: Waiting... \n", broker_data->broker_id);
+            pthread_cond_wait(&price_cond, &stock_mutex);
+        }
+        // checking if enough stocks are available
+        if (stock.count >= num_stocks)
+        {
+            stock.count -= num_stocks;
             pthread_mutex_unlock(&stock_mutex);
             total_stocks_bought += num_stocks;
             printf("Broker %d: %d stocks bought \n", broker_data->broker_id, num_stocks);
+            sleep(1);
         }
         else
         {
@@ -58,13 +90,17 @@ void *stock_broker(void *arg)
 int main(int argc, char *argv[])
 {
     // variable to store the thread and thread data
-    pthread_t threads[5];
+    pthread_t threads[6];
     struct thread_data thread_data_array[5];
 
-    // initialisation of mutex
+    // initialisation of mutex and cond
     pthread_mutex_init(&stock_mutex, NULL);
+    pthread_cond_init(&price_cond, NULL);
 
-    // thread creation
+    // create stock exchange thread
+    pthread_create(&threads[5], NULL, &stock_exchange, NULL);
+
+    // thread creation for brokers
     for (int i = 0; i < 5; i++)
     {
         // Initialize data for current thread
@@ -99,8 +135,9 @@ int main(int argc, char *argv[])
         printf("Broker %d bought %d stocks.\n", i, *r);
     }
 
-    // destroying mutex
+    // destroying mutex and cond
     pthread_mutex_destroy(&stock_mutex);
+    pthread_cond_destroy(&price_cond);
 
     return 0;
 }
