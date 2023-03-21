@@ -13,7 +13,7 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
    - `pthread_create.c` This file demonstrates how to create a new thread using the pthread_create() function.
    - `pthread_join.c` This file demonstrates how to wait for a thread to complete its execution using the pthread_join() function.
    - `pthread_multiple_threads.c` This file demonstrates how to create and join multiple threads using a for loop.
-3. [Memory in Pthreads](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/sharedmemory.md)
+3. [Mutexes](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/sharedmemory.md)
    - `pthread_shared_vars.c` This file demonstrates how threads share memory.
    - `pthread_race_condition.c` This file demonstrates how the share memory may result in race conditions.
    - `pthread_mutex.c` This file demonstrates how to use a mutex to protect a critical section of code from concurrent access by multiple threads.
@@ -21,14 +21,20 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
    - `pthread_return_value.c` This file demonstrates how to return values from the thread functions. <br />
    - `pthread_exit.c` This file demonstrates how to use pthread_exit to return values. <br />
    - `pthread_thread_arg.c` This file demonstrates how to send arguments in thread functions. <br />
-5. [Finding array sum parallely](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/sumarray.md)
+5. [Try Lock](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/trylock.md)
+   - `pthread_trylock.c` This file demonstrates how mutex lock is different from try lock. <br />
+6. [Condition Variables](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/conditionvar.md)
+   - `pthread_cond_var.c` This file demonstrates how condition variables can be used. <br />
+   - `pthread_cond_broadcast.c` This file demonstrates how broadcast signal can be used. <br />
+
+### Mini Projects
+
+1. [Finding array sum parallely](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/sumarray.md)
    - `pthread_sum_array.c` This file demonstrates how to sum an array parallely using two threads. <br />
    - `pthread_sum_array_mutex.c` This file demonstrates how to sum an array parallely using mutex. <br />
-6. [Try Lock](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/trylock.md)
-   - `pthread_trylock.c` This file demonstrates how mutex lock is different from try lock. <br />
-7. [Condition Variables](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/conditionvar.md)
-   - `pthread_cond_var.c` This file demonstrates how condition variables can be used. <br />
-   - `pthread_cond_broadcast.c` This file demonstrates how brodcast signal can be used. <br />
+2. [Stock Simulator](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/stocksimulator.md)
+   - `stocksimulator1.c` This is a program that simulates a simple stock market where multiple threads (representing stock brokers) try to buy stocks until they are no longer available. It uses a mutex to synchronize access to the shared stock data and outputs a summary of how many stocks each broker bought. <br />
+   - `stocksimulator2.c` The second program builds on the first one by adding a stock exchange thread that periodically updates the stock price. The stock brokers only buy the stock if the price falls below a certain threshold, and they wait until the price drops before making a purchase using condition variables. <br />
 
 ## Prerequisites
 
