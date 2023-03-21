@@ -25,7 +25,7 @@ POSIX Threads (also known as Pthreads) is a POSIX standard for threads programmi
    - `pthread_trylock.c` This file demonstrates how mutex lock is different from try lock. <br />
 6. [Condition Variables](https://github.com/japnitahuja/POSIX-Threads/blob/main/Guide/conditionvar.md)
    - `pthread_cond_var.c` This file demonstrates how condition variables can be used. <br />
-   - `pthread_cond_broadcast.c` This file demonstrates how brodcast signal can be used. <br />
+   - `pthread_cond_broadcast.c` This file demonstrates how broadcast signal can be used. <br />
 
 ### Mini Projects
 
