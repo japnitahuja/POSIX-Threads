@@ -6,9 +6,14 @@ In POSIX threads (pthread) programming, the return value of a thread function ca
 the `pthread_join()` function. The `pthread_join()` function blocks the calling thread until the thread specified by the thread 
 argument terminates. The exit status of the thread function can be obtained using a pointer argument to `pthread_join()` function.
 
+Another way to do this is using `pthread_exit` which is a function that is used to terminate a thread. 
+It is called by a thread to indicate that it is done executing and to pass a return value (if any) to the thread that joined it.
+
 #### Source Code: 
-`pthread_return_value.c` This program demonstrates how to use threads to return a value to the main program.The return_value() function returns 
+`pthread_return_value.c` This program demonstrates how to use threads to return a value to the main program. The return_value() function returns 
 an integer value of 100 using a dynamically allocated integer. 
+
+`pthread_exit.c` This program demonstrates how to use pthread_exit to return a value to the main program.
 
 ## Thread Arguments
 Thread arguments in Pthreads refer to passing arguments to a thread function when creating a new thread. This is useful when 
